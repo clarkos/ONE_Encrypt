@@ -224,3 +224,27 @@ label {
   color: #000;
 }
 /*  #####################################  */
+
+/* footer */
+.glyphs {
+  margin: 25px 0 0 20px 0;
+  padding: 20px 0 20px 30px;
+  color: rgba(0,0,0,0.5);
+  border: 1px solid #d8e0e5;
+  border-radius: 3px;
+}
+
+.name {
+  font: italic bold small 'Roboto', sans-serif;
+  padding-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  align-content: center;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #000;
+}
