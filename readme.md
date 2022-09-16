@@ -79,3 +79,8 @@ https://developer.mozilla.org/es/docs/Learn/Common_questions/Using_Github_pages
 
 # mensaje secreto
 fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!
+
+dimensiones
+  - desktop          1440x1024
+  - mobile - big      778x1174
+  - mobile - small     375x933
