@@ -1,8 +1,5 @@
 let auxForm = [['e', 'enter'],['i', 'imes'],['a', 'ai'],['o', 'ober'],['u', 'ufat']];
 
-const inTxt = document.getElementById('mainInput');
-const mensaje = document.getElementById('resultado');
-
 function encript (strCrypt){
     strCrypt = strCrypt.toLowerCase();
     for (let i = 0; i < auxForm.length; i++) {
@@ -24,6 +21,8 @@ function decript (strCrypt){
 }
 
 let switchBtn = document.getElementById('fnSwitch');
+let inTxt = document.getElementById('mainInput');
+let mensaje = document.getElementById('resultado');
 
 $(document).ready(function() {
     $("#fnSwitch").on("change", function () {

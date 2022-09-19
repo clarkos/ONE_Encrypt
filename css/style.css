@@ -20,7 +20,7 @@
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
+  /* speak: none; */
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,7 +33,7 @@
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
+  /* speak: none; */
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -60,11 +60,28 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: #d8e0e5;
+  /* background-size: 10rem; */
 }
+
+#contendedor {
+  width: 960px;
+  height: 480;
+  margin: 5% auto;
+  border: 1px solid black;
+  background-image: url("../assets/bg.jpg");
+  background-position: auto;
+  background-repeat: no-repeat;
+  background-size: auto;
+  }
+
 
 main {
   display: flex;
+  border: 1px solid #000;
+  background-image: '../assets/bg.jpg';
+  background-size: auto;
 }
 
 .btn {
@@ -73,6 +90,14 @@ main {
   padding-top: 3px;
   width: 100%;
   border: 1px solid #000;
+}
+
+footer {
+  text-align: center;
+}
+
+footer ul {
+  align-content: center;
 }
 
 

@@ -17,59 +17,64 @@
 </head>
 
 <body>
-    <header>
-        <img src="./assets/vector.png" alt="Logo ALURA con la inicial de la letra a">
-        <div class="headCont">
-            <h1 class="icon-lock"> Encriptador - <em>ALURA ONE</em></h1>
-        </div>
-    </header>
+    <div id="contendedor">
+        <header>
+            <div class="headCont">
+                <img src="./assets/vector.png" alt="Logo ALURA con la inicial de la letra a">
+                <h1> Encriptador - <em>ALURA ONE</em></h1>
+            </div>
+        </header>
 
-    <main class="txtBoxes">
-        <section id="textBox">
-            <div class="inputCont"><label for="entrada"></label>
-                <textarea class="ingreso" name="entrada" id="mainInput" cols="40" rows="6"
-                placeholder="Ingrese su texto aquí"></textarea>
+        <main class="txtBoxes">
+            <section id="textBox">
+                <div class="inputCont"><label for="entrada"></label>
+                    <textarea class="ingreso" name="entrada" id="mainInput" cols="40" rows="6"
+                    placeholder="Ingrese su texto aquí"></textarea>
+                </div>
+                <div class="separador"> </div>
+                <div class="btnHolder">
+                        <div class="btn-container">
+                            <label class="switch btn-color-mode-switch">
+                                    <input type="checkbox" name="fnSwitch" id="fnSwitch" value="1">
+                                    <label for="fnSwitch" data-on="Desencriptar" data-off="Encriptar" 
+                                    class="btn-color-mode-switch-inner"></label>
+                            </label>
+                        </div>
+                </div>
+            </section>
+            <section>
+            </section>
+            <section class="copyBox">
+                <div class="copyArea">
+                    <textarea class="result" name="resultado" id="resultado" cols="18" rows="9"
+                    placeholder="Aqui figura el mensaje procesado"></textarea>
+                    <button class="btn" onclick="copiar()">Copiar</button>
             </div>
-            <div class="separador"> </div>
-            <div class="btnHolder">
-                    <div class="btn-container">
-                        <label class="switch btn-color-mode-switch">
-                                <input type="checkbox" name="fnSwitch" id="fnSwitch" value="1">
-                                <label for="fnSwitch" data-on="Desencriptar" data-off="Encriptar" 
-                                class="btn-color-mode-switch-inner"></label>
-                        </label>
-                    </div>
+            </section>
+        </main>
+        <footer>
+            <div class="glyphs">
+                
+                <ul class="icons">
+                    <li>
+                        <a href="https://www.facebook.com/luciano.schmarsow" target="_blank"><div data-icon="b" class="icon"></div></a>
+                    </li>
+                    <a>
+                        <a href="https://www.twitter.com/ldschmarsow" target="_blank"><div data-icon="c" class="icon"></div></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/lucianoschmarsow" target="_blank"><div data-icon="e" class="icon"></div></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/clarkos" target="_blank"><div data-icon="d" class="icon"></div></a>
+                    </li>
+                    <li>
+                        <span class="name">&nbsp;&nbsp;Luciano Schmarsow</span>
+                    </li>
+                </ul>
             </div>
-        </section>
-        <section>
-        </section>
-        <section class="copyBox">
-            <div class="copyArea">
-                <textarea class="result" name="resultado" id="resultado" cols="18" rows="9"
-                placeholder="Aqui figura el mensaje procesado"></textarea>
-                <button class="btn" onclick="copiar()">Copiar</button>
-        </div>
-        </section>
-    </main>
-    <footer>
-        <div class="glyphs">
-            <span class="name">Luciano Schmarsow</span>
-            <ul class="icons">
-                <li>
-                    <a href="https://www.facebook.com/luciano.schmarsow" target="_blank"><div data-icon="b" class="icon"></div></a>
-                </li>
-                <a>
-                    <a href="https://www.twitter.com/ldschmarsow" target="_blank"><div data-icon="c" class="icon"></div></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/lucianoschmarsow" target="_blank"><div data-icon="e" class="icon"></div></a>
-                </li>
-                <li>
-                    <a href="https://github.com/clarkos" target="_blank"><div data-icon="d" class="icon"></div></a>
-                </li>
-            </ul>
-        </div>
-    </footer>
+        </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="functions.js"></script>
 </body>
