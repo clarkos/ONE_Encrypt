@@ -9,8 +9,9 @@
     url("../font/untitled-font-1.svg#untitled-font-1") format("svg");
   font-weight: normal;
   font-style: normal;
-
 }
+
+
 
 [data-icon]:before {
   font-family: "untitled-font-1" !important;
@@ -77,7 +78,6 @@ main {
 
 
 /*  #####################################  */
-
 /*switch styles*/
 
 div.btn-container{
@@ -109,11 +109,12 @@ label {
   width: 182px;
   height: 30px;
   background: #f8b154;
+  color:#f8b154;
   border-radius: 26px;
   overflow: hidden;
   position: relative;
   transition: all 0.3s ease;
-  /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+  box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;
   display: block;
 }
 
@@ -182,7 +183,7 @@ label {
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
   background: #66BB6A;
-  color: #fff;
+  color: #66BB6A;
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked ~ .alert{

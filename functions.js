@@ -1,16 +1,4 @@
-/* La letra "a" es convertida para "ai"
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
-para usar con el metodo RegEx
-let aCryp = /ai/;
-let eCryp = /enter/;
-let iCryp = /imes/;
-let oCryp = /ober/;
-let uCryp = /ufat/; */
-
-let auxForm = [['a', 'ai'],['e', 'enter'],['i', 'imes'],['o', 'ober'],['u', 'ufat']];
+let auxForm = [['e', 'enter'],['i', 'imes'],['a', 'ai'],['o', 'ober'],['u', 'ufat']];
 
 const inTxt = document.getElementById('mainInput');
 const mensaje = document.getElementById('resultado');
@@ -35,23 +23,26 @@ function decript (strCrypt){
     return strCrypt;
 }
 
-const funcion = document.getElementById('fnSwitch');
-let switchBtn = getElementById('fnSwitch');
+let switchBtn = document.getElementById('fnSwitch');
 
 $(document).ready(function() {
     $("#fnSwitch").on("change", function () {
-        btnProceed(this);
+        let resultado = '';
+        if($(switchBtn).prop("checked") == true){
+            resultado = encript(inTxt.value);
+            mensaje.value = resultado;
+            inTxt.value = '';
+        } 
+        if ($(switchBtn).prop("checked") == false){
+            resultado = decript(inTxt.value);
+            mensaje.value = resultado;
+            inTxt.value = '';
+        }
     })
 });
 
-function btnProceed(ele) {
-    let resultado = '';
-    if($(ele).prop("checked") == true){
-        resultado = encript(inTxt.value);
-        mensaje.value = resultado;
-    } 
-    if ($(ele).prop("checked") == false){
-        resultado = decript(inTxt.value);
-        mensaje.value = resultado;
-        }
-    }
+
+function copiar (){
+    inTxt.value = mensaje.value;
+    mensaje.value = '';
+}
