@@ -47,5 +47,14 @@ function copiar (){
     inTxt.value = mensaje.value;
     mensaje.value = '';
     mensaje.style.backgroundImage = 'url("./assets/lock.png")';
-
 }
+
+let eTouch= document.getElementById("btnCopiar");
+eTouch.addEventListener('touchstart', function(event){
+    //Comprobamos si hay varios eventos del mismo tipo
+    if (event.targetTouches.length == 1) { 
+        let touch = event.targetTouches[0]; 
+        // con esto solo se procesa UN evento touch
+        copiar();
+    }
+});
