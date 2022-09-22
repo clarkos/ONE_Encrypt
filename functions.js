@@ -31,11 +31,13 @@ $(document).ready(function() {
             resultado = encript(inTxt.value);
             mensaje.value = resultado;
             inTxt.value = '';
+            mensaje.style.backgroundImage = 'none'
         } 
         if ($(switchBtn).prop("checked") == false){
             resultado = decript(inTxt.value);
             mensaje.value = resultado;
             inTxt.value = '';
+            mensaje.style.backgroundImage = 'none'
         }
     })
 });
@@ -44,4 +46,6 @@ $(document).ready(function() {
 function copiar (){
     inTxt.value = mensaje.value;
     mensaje.value = '';
+    mensaje.style.backgroundImage = 'url("./assets/lock.png")';
+
 }

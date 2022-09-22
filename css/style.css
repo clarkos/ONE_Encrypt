@@ -11,8 +11,6 @@
   font-style: normal;
 }
 
-
-
 [data-icon]:before {
   font-family: "untitled-font-1" !important;
   content: attr(data-icon);
@@ -26,8 +24,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "untitled-font-1" !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -39,64 +36,303 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-lock:before {
-  content: "\61";
-}
-.icon-fb:before {
-  content: "\62";
-}
-.icon-tw:before {
-  content: "\63";
-}
-.icon-gh:before {
-  content: "\64";
-}
-.icon-lin:before {
-  content: "\65";
+.icon-lock:before {   content: "\61";}
+.icon-fb:before {   content: "\62";}
+.icon-tw:before {  content: "\63";}
+.icon-gh:before {  content: "\64";}
+.icon-lin:before {  content: "\65";}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #d8e0e5;
-  /* background-size: 10rem; */
+  font-size: 16px;
+  font-weight: 300;
+  background: url('../assets/coolBg2.png') no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+  /* background-image: url('../assets/coolBg2.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+ background-repeat: space; */
 }
 
-#contendedor {
-  width: 960px;
-  height: 480;
-  margin: 5% auto;
-  border: 1px solid black;
-  background-image: url("../assets/bg.jpg");
-  background-position: auto;
-  background-repeat: no-repeat;
-  background-size: auto;
-  }
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #000;
+}
 
+/* Seccion de contenido */
+#mainCont {
+  width: 90%;
+  margin: 1em auto;
+  background-color:#d8e0e5;
+  border-radius: 0.5em;
+}
 
-main {
+.header {
+  display: inline-flex;
+  width: 100%;
+}
+
+.header, img {
+  height: auto;
+  padding: 0.5em 1em;
+}
+
+#titulo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding-top: 0.5em;
+  padding-left: 1em;
+  font-size: 2rem;
+}
+
+#mainSection{
+  display: inline-flex;
+  width: 100%;
+}
+
+#inBox {
+  width: 90%;
+  padding: 1em;
+}
+
+.ingreso {
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  padding: 0.5em;
+  width:100%;
+  resize: none;
+  border-style: none;
+  border-radius: 0.5em;
+}
+
+.btnHolder {
+  margin-top: 0.5em;
   display: flex;
-  border: 1px solid #000;
-  background-image: '../assets/bg.jpg';
-  background-size: auto;
+  justify-content: center;
+}
+
+#copyBox {
+  width: 50%;
+  padding: 1em;
+}
+
+.result {
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  padding: 0.5em;
+  width: 100%;
+  resize: none;
+  border-style: none;
+  border-radius: 0.5em;
+  background-image: url('../assets/lock.png');
+  background-position: 50%;
 }
 
 .btn {
-  height: 25px;
-  text-align: center;
-  padding-top: 3px;
-  width: 100%;
-  border: 1px solid #000;
+  width: 95%;
+  margin-top: 0.5em;
+  margin-left: 5px;
+  min-width: 130px;
+  height: 28px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 15px;
+  border: 2px solid #d90429;
+  background: #d90429;
 }
 
-footer {
-  text-align: center;
+.btn:hover {
+  background: #fff;
+  color: #d90429
 }
 
-footer ul {
+/* footer */
+.glyphs {
+  display:flex;
+  justify-content: center;
+  margin-top: 1em;
+  color: rgba(0,0,0,0.5);
+  border-radius: 3px;
+}
+
+.glyps, li {
+  padding-right: 10px;
+}
+
+.owner {
+  display:flex;
+  justify-content: center;
+  font: bold 0.8em 'Roboto', sans-serif;
+  padding-bottom: 1em;
+}
+
+.icons {
+  display: flex;
   align-content: center;
 }
 
+@media (max-width: 768px) {
+  body {
+    background: url('../assets/bg-mobile2.jpg') no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+    font-size: 14px;
+  }
 
+  #mainCont {
+    width: 48em;
+    height: 100%;
+  }
+  .logo{
+    width:  auto;
+    height: 50px;
+  }
+
+  #titulo {
+    padding: 10px
+  }
+
+  #mainSection {
+    display: block;
+  }
+
+  #inBox {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .btnHolder {
+    margin-top: 2em;
+    scale: 2;
+  }
+
+  #copyBox {
+    display: block;
+    width: 48em;
+    padding: 1em;
+    /* position: relative; */
+  }
+
+  .copyArea {
+    position:relative;
+  }
+
+  .result {
+    background-repeat:no-repeat;
+  }
+
+  .btn{
+    width: 29%;
+    scale: 2;
+    margin: 2em 35%;
+  }
+
+  .glyphs {
+    scale: 3;
+  }
+  .owner {
+    scale: 2;
+    padding: 1.5em;
+  }
+  
+  .icons {
+    display: flex;
+    align-content: center;
+    margin: 1em;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    background: url('../assets/bg-mobile.jpg') no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+    font-size: 16px;
+  }
+
+  #mainCont {
+    width: 23em;
+    /* height: 100%; */
+  }
+
+  .logo{
+    width:  auto;
+    height: 50px;
+  }
+
+  #titulo {
+    font-size: 1.2em;
+    padding-top: 0.9em;
+  }
+
+  #mainSection {
+    display: block;
+  }
+
+  #inBox {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .btnHolder {
+    margin-top: 1.5em;
+    scale: 1.5;
+  }
+
+  #copyBox {
+    display: block;
+    width: 23em;
+    padding: 1em;
+    /* position: relative; */
+  }
+
+  .copyArea {
+    position:relative;
+  }
+
+  .result {
+    background-repeat:no-repeat;
+  }
+
+  .btn{
+    width: 29%;
+    scale: 2;
+    margin: 2em 8em;
+  }
+
+  .glyphs {
+    scale: 3;
+  }
+  .owner {
+    scale: 2;
+    padding: 1.5em;
+  }
+  
+  .icons {
+    display: flex;
+    align-content: center;
+    margin: 1em;
+  }
+}
 
 /*  #####################################  */
 /*switch styles*/
@@ -246,27 +482,3 @@ label {
   color: #000;
 }
 /*  #####################################  */
-
-/* footer */
-.glyphs {
-  margin: 25px 0 0 20px 0;
-  padding: 20px 0 20px 30px;
-  color: rgba(0,0,0,0.5);
-  border: 1px solid #d8e0e5;
-  border-radius: 3px;
-}
-
-.name {
-  font: italic bold small 'Roboto', sans-serif;
-  padding-bottom: 10px;
-}
-
-.icons {
-  display: flex;
-  align-content: center;
-}
-
-a:link, a:visited {
-  text-decoration: none;
-  color: #000;
-}
