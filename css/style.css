@@ -73,7 +73,7 @@ a, a:link, a:visited {
   width: 90%;
   margin: 1em auto;
   background-color:#d8e0e5;
-  border-radius: 0.5em;
+  border-radius: 1em;
 }
 
 .header {
